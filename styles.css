@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(bkg3.jpg);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 50px;
+}
+/* Responsive styles */
+@media (max-width: 700px) {
+    .container{
+      width: 350px;
+    }
+    h1{
+      font-size: 20px;
+    }
+    input[text], input[number]{
+      width: 70%;
+    }
+    button{
+      width: 150px;
+      flex-wrap: nowrap;
+    }
+    p{
+      font-size: 15px;
+    }
+    #serial{
+      font-size: 19px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container{
+      width: 350px;
+    }
+    h1{
+      font-size: 20px;
+    }
+    input[text], input[number]{
+      width: 70%;
+    }
+    button{
+      width: 150px;
+      flex-wrap: nowrap;
+    }
+    p{
+      font-size: 13px;
+    }
+    #serial{
+      font-size: 18px;
+    }
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 95%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+#length:hover{
+    background-color: #FFFFFF;
+    color: #C91A69;
+    transform: scale(0.95);
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 95%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+#customChars:hover{
+    background-color: #FFFFFF;
+    color: #C91A69;
+    transform: scale(0.95);
+}
+button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+button:hover {
+    background-color: #C91A69;
+    transform: scale(0.9);
+}
+.result {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    word-break: break-all;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}

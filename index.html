@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Códigos Seriales</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos CSS aquí */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Códigos Seriales</h1>
+        <input type="number" id="length" placeholder="Longitud del código" min="1" max="32">
+        <br><br>
+        <!--IMPUT TEXT CON PALABRA ESCRITA POR DEFECTO EN value-->
+        <input type="text" id="customChars" placeholder="Agregar caracteres específicos" value="GSISTEMAS" style="text-transform: uppercase;">
+        <br><br>
+        <button onclick="generateSerial()">Generar Código</button>
+        <br><br><hr>
+        <div class="result" id="serial"></div>
+        <br><hr>
+        <p>&copy; 2024 Adrian Gomora</p>
+        <p>Todos los derechos reservado</p>
+    </div>
+
+    <script>
+        // Script JavaScript aquí
+        function generateSerial() {
+            const length = document.getElementById('length').value || 17;
+            let customChars = document.getElementById('customChars').value;
+            customChars = customChars.toUpperCase(); // Asegurar que los caracteres sean mayúsculas
+            const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let serial = customChars;
+
+            for (let i = serial.length; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                serial += characters[randomIndex];
+            }
+
+            document.getElementById('serial').textContent = serial;
+        }
+    </script>
+</body>
+</html>
